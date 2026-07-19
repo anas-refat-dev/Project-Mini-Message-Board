@@ -1,0 +1,20 @@
+<h1>
+  <%= title %>
+</h1>
+
+<a href="/new">Create a new message</a>
+
+<% messages.forEach((message, index)=> { %>
+  <div>
+    <p>User: <%= message.user %>
+    </p>
+    <p>Message: <%= message.text %>
+    </p>
+    <p>At: <%= message.added %>
+    </p>
+
+    <a href="/new/<%= index %>">Open</a>
+  </div>
+
+  <br>
+  <% }) %>
